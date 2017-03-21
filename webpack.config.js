@@ -4,8 +4,8 @@ const pkg = require('./package.json');
 const webpack = require('webpack');
 
 var API_URL = {
-  production: JSON.stringify('https://app.kotkt.nl'),
-  development: JSON.stringify('http://localhost:8000')
+  production: JSON.stringify('https://api.guushamm.nl/'),
+  development: JSON.stringify('http://localhost:8080/g-movement-0.0.1-SNAPSHOT/')
 };
 
 // check environment mode
