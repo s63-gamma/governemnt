@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {HashRouter, Route} from "react-router-dom";
+
+import {Routes} from './routes';
 
 document.write("<div id='root'></div>");
 
 ReactDOM.render(
-  <h1>hello world</h1>,
+  <HashRouter>
+    <Routes />
+  </HashRouter>,
   document.getElementById('root')
 );
