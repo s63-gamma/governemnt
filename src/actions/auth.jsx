@@ -1,3 +1,4 @@
+import {sendMessage} from "./snackbar";
 export const LOGIN_PENDING = "LOGIN_PENDING";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAILED = "LOGIN_FAILED";
@@ -15,6 +16,7 @@ export function login(credentials) {
 
 export function logout(){
   return (dispatch) => {
-    dispatch({type: LOGOUT_SUCCESS})
+    dispatch({type: LOGOUT_SUCCESS});
+    dispatch(sendMessage('Logout successful!'));
   }
 }

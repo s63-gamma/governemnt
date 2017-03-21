@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {FlatButton} from 'material-ui';
 
 import Login from './auth/login';
+import SnackbarWrapper from './snackbar';
 import {logout} from "../actions/auth";
 
 export class Overview extends React.Component {
@@ -14,6 +15,7 @@ export class Overview extends React.Component {
           title="Government"
           iconElementRight={<FlatButton label={this.props.isLoggedIn ? this.props.username : 'Log in'}/>}
           onRightIconButtonTouchTap={() => this.props.logout()}/>
+        <SnackbarWrapper />
         {this.props.isLoggedIn == false ?
           <Login /> :
           <div>
